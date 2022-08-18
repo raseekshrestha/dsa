@@ -132,6 +132,15 @@ void del(int index){
     free(ptr); 
 }
 
+void destroy(){
+    while (head!=NULL){
+        NodeType *toDel = head;
+        head = head->next;
+        free(toDel);        
+    }
+    printf("list destroyed\n");
+}
+
 int main(){
     insertEnd(1); // add 1
     display();
@@ -148,6 +157,8 @@ int main(){
     deleteBeg(); // delete 1st element
     display();
     del(1); //delete elem at index 1
+    display();
+    destroy();
     display();
 }
 
