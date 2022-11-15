@@ -9,7 +9,7 @@ void printarr(int *arr,int size){
 int main(){
     int size=10,min=0,temp;
     int arr[size] = {23,10,20,3,45,76,67,24,2,11};
-    printf("Bofore sorting:\n");
+    printf("Before selection sorting:\n");
     printarr(&arr[0],size);
     for (int i=0;i<size-1;i++){
         min = i;
@@ -25,6 +25,6 @@ int main(){
         }
     }
 
-    printf("\nAfter sorting:\n");
+    printf("\nAfter selection sorting:\n");
     printarr(&arr[0],size);
 }
